@@ -14,7 +14,7 @@ dishRouter.route('/')
     res.end('Will send details of all dishes')
 })
 .post((req, res, next) => {
-    res.end(`Will add  the dish: ${req.body.name} with details ${req.body.description}`)
+    res.end(`Will add the dish: ${req.body.name} with details ${req.body.description}`)
 })
 .put((req, res, next) => {
     res.statusCode = 403
@@ -29,7 +29,7 @@ dishRouter.route('/:dishId')
     res.end(`Will send details of dish ${req.params.dishId} to you!`)
 })
 .post((req, res, next) => {
-    res.end(`POST operation not supported on dishes/ ${req.params.dishId}`)
+    res.end(`POST operation not supported on dishes/${req.params.dishId}`)
 })
 .put((req, res, next) => {
     res.write(`Updating the dish ${req.params.dishId} \n`)

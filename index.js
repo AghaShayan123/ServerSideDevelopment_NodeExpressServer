@@ -3,6 +3,8 @@ const http = require('http');
 const morgan = require('morgan')
 
 const dishRouter = require('./routes/dishRouter')
+const promoRouter = require('./routes/promoRouter')
+const leaderRouter = require('./routes/leaderRouter')
 const hostname = 'localhost';
 const port = 3000;
 
@@ -13,6 +15,8 @@ app.use(express.json())
 app.use(express.static(__dirname + '/public'))
 
 app.use('/dishes', dishRouter)
+app.use('/promotions', promoRouter)
+app.use('/leaders', leaderRouter)
 
 app.use((req, res, next) => {    
     res.statusCode = 200;
